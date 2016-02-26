@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "build": "webpack",
-    "start": "node serverjs"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
