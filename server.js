@@ -135,7 +135,6 @@ userSchema.statics.upsert = function (key, options) {
     };
     var query = {};
     query[key] = options[key];
-    console.log(query, options)
     self.collection.findAndModify(query, [], { $set: options }, { upsert: true }, callback);
   });
 };
@@ -203,7 +202,6 @@ passport.use(new TwitterStrategy({
 }));
 
 passport.serializeUser(function(user, done) {
-  console.log(user)
   done(null, user._id);
 });
 
